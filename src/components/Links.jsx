@@ -23,7 +23,7 @@ export const Links = ({ user }) => {
         <Link
           $notAvailable={!user?.twitter_username}
           as={user?.twitter_username === "" && "p"}
-          href={`https://x.com/${user?.twitter_username}`}
+          href={user?.twitter_username && `https://x.com/${user?.twitter_username}`}
         >
           <IconTwitter aria-hidden="true" />
           {user?.twitter_username || "Not available"}
