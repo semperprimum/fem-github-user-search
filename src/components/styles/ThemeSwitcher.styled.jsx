@@ -12,8 +12,16 @@ export const ThemeSwitcherButton = styled.button`
   letter-spacing: 0.15625rem;
   font-weight: 700;
   color: ${({ theme }) => theme.colors.bodyPrimary};
+  svg {
+    fill: currentColor;
+  }
 
   @media only screen and (min-width: 60em) {
     transform: translateX(0.3rem);
+    cursor: pointer;
+
+    &:hover {
+      color: ${({$themeName}) => ( $themeName === "dark" ? "hsla(222, 44%, 70%, 1)" : "hsla(220, 18%, 16%, 1)" )}; 
+    }
   }
 `;

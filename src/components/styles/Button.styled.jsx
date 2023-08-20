@@ -13,4 +13,12 @@ export const Button = styled.button`
   @media only screen and (min-width: 37.5em) {
     padding: 0.8rem 1.5rem;
   }
+
+  @media only screen and (min-width: 60em) {
+    transition: filter 175ms ease;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(1.3);
+  }
+  }
 `;

@@ -21,27 +21,34 @@ export const LinksItem = styled.li`
   @media only screen and (min-width: 37.5em) {
     &:nth-child(2) {
       grid-column: 1 / 2;
-  }
+    }
     &:nth-child(3) {
       grid-row: 1;
       grid-column: 2 / 3;
+    }
   }
 `;
 
 export const Link = styled.a`
   ${({ $unavailable }) => $unavailable && "opacity: 0.5;"}
   font-size: var(--fs-300);
-    max-width: 13.125rem;
+  max-width: 13.125rem;
   text-align: start;
   display: grid;
-    overflow: hidden;
-    align-items: center;
+  overflow: hidden;
+  align-items: center;
   grid-template-columns: 1.25rem auto;
   gap: 0.8rem;
+  text-decoration: none;
   color: ${({ theme }) => theme.colors.bodyPrimary};
   svg {
     fill: ${({ theme }) => theme.colors.bodyPrimary};
   }
+
+  @media only screen and (min-width: 60em) {
+    &:hover {
+      text-decoration: ${({ $link }) => ($link ? "underline" : "none")};
+    }
   }
 `;
 

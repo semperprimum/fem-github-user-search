@@ -20,6 +20,7 @@ export const Links = ({ user }) => {
           $unavailable={!user?.blog}
           as={user?.blog === "" && "p"}
           href={user?.blog}
+          $link={user?.blog}
         >
           <IconWebsite aria-hidden="true" />
           {shortenLink(user?.blog) || "Not available"}
@@ -33,6 +34,7 @@ export const Links = ({ user }) => {
           href={
             user?.twitter_username && `https://x.com/${user?.twitter_username}`
           }
+          $link={user?.twitter_username}
         >
           <IconTwitter aria-hidden="true" />
           {user?.twitter_username || "Not available"}
@@ -46,6 +48,7 @@ export const Links = ({ user }) => {
             user?.company &&
             `https://github.com/${user?.company.replace("@", "")}`
           }
+          $link={user?.company}
         >
           <IconCompany aria-hidden="true" />
           {user?.company || "Not available"}
