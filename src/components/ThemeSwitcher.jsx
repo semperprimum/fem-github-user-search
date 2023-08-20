@@ -12,7 +12,7 @@ export const ThemeSwitcher = () => {
       }
       onClick={toggleTheme}
     >
-      <p aria-hidden="true">{themeName === "light" ? "Dark" : "Light"}</p>
+      <span aria-hidden="true">{themeName === "light" ? "Dark" : "Light"}</span>
       {themeName === "light" ? (
         <IconMoon aria-hidden="true" />
       ) : (

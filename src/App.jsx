@@ -32,9 +32,7 @@ const App = () => {
   return (
     <ThemeProvider>
       <GlobalStyles />
-      <header>
-        <Header />
-      </header>
+      <Header />
       <main>
         <Search
           searchError={searchError}
