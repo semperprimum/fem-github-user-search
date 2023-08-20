@@ -20,7 +20,7 @@ export const Search = ({
   return (
     <Container>
       <SearchWrapper $themeName={themeName}>
-        <SearchIcon as={IconSearch} />
+        <SearchIcon aria-hidden="true" as={IconSearch} />
         <SearchInput
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}

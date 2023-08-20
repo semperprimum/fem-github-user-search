@@ -7,7 +7,7 @@ import {
 
 export const Stats = ({ user }) => {
   return (
-    <StatsWrapper role="list">
+    <StatsWrapper aria-label="Stats" role="list">
       <Stat>
         <StatTitle>Repos</StatTitle>
         <StatNumber>{user?.public_repos}</StatNumber>

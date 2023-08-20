@@ -3,19 +3,20 @@ import { ReactComponent as IconLocation } from "../assets/icon-location.svg";
 import { ReactComponent as IconWebsite } from "../assets/icon-website.svg";
 import { ReactComponent as IconTwitter } from "../assets/icon-twitter.svg";
 import { ReactComponent as IconCompany } from "../assets/icon-company.svg";
-import {shortenLink} from "../utils/ShortenLink";
+import { shortenLink } from "../utils/ShortenLink";
 
 export const Links = ({ user }) => {
   return (
-    <LinksList aria-label="Links" role="list">
+    <LinksList aria-label="links" role="list">
       <LinksItem>
-        <Link $unavailable={!user?.location} as={"p"}>
+        <Link aria-label="Location" $unavailable={!user?.location} as={"p"}>
           <IconLocation aria-hidden="true" />
           {user?.location || "Not available"}
         </Link>
       </LinksItem>
       <LinksItem>
         <Link
+          aria-label="Website"
           $unavailable={!user?.blog}
           as={user?.blog === "" && "p"}
           href={user?.blog}
@@ -26,6 +27,7 @@ export const Links = ({ user }) => {
       </LinksItem>
       <LinksItem>
         <Link
+          aria-label="Twitter"
           $unavailable={!user?.twitter_username}
           as={user?.twitter_username === "" && "p"}
           href={
@@ -38,6 +40,7 @@ export const Links = ({ user }) => {
       </LinksItem>
       <LinksItem>
         <Link
+          aria-label="Company"
           $unavailable={!user?.company}
           href={
             user?.company &&

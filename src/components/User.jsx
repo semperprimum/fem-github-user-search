@@ -54,10 +54,10 @@ export const User = ({ user, isLoading }) => {
           ></i>
         ) : (
           <>
-            {isDesktop && <UserImage src={user?.avatar_url} />}
+            {isDesktop && <UserImage aria-label={user?.name} src={user?.avatar_url} />}
             <UserWrapper>
               <UserHeader>
-                {!isDesktop && <UserImage src={user?.avatar_url} />}
+                {!isDesktop && <UserImage aria-label={user?.name} src={user?.avatar_url} />}
                 <UserContent>
                   <UserNames>
                     <UserName>{user?.name}</UserName>
