@@ -15,11 +15,20 @@ export const SearchWrapper = styled.form`
   &:focus-within {
     outline: 1.5px solid ${({ theme }) => theme.colors.primary};
   }
+  @media only screen and (min-width: 37.5em) {
+    padding: 0.6rem 0.6rem 0.6rem 2rem;
+  }
 `;
 export const SearchIcon = styled.div`
   margin-right: 0.5rem;
   min-width: 1.25rem;
   max-width: 1.25rem;
+
+  @media only screen and (min-width: 37.5em) {
+    margin-right: 1.5rem;
+    min-width: 1.5rem;
+    max-width: 1.5rem;
+  }
 `;
 export const SearchInput = styled.input`
   font-size: var(--fs-500);
@@ -32,5 +41,17 @@ export const SearchInput = styled.input`
   &::placeholder {
     color: ${({ theme }) => theme.colors.bodyPrimary};
     opacity: 1;
+  }
+`;
+
+export const SearchError = styled.span`
+  min-width: fit-content;
+  font-size: var(--fs-300);
+  margin-inline: 0.5rem;
+  color: ${({ theme }) => theme.colors.error};
+  font-weight: 700;
+  @media only screen and (min-width: 37.5em) {
+    margin-left: 0.3rem;
+    margin-right: 1rem;
   }
 `;

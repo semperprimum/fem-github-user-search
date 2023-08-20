@@ -9,6 +9,7 @@ const lightTheme = {
     bodyPrimary: "hsla(217, 35%, 45%, 1)",
     bodyAccent: "hsla(217, 20%, 51%, 1)",
     bodyBold: "hsla(217, 21%, 21%, 1)",
+    error: "hsla(0, 91%, 62%, 1)",
   },
 };
 
@@ -20,6 +21,7 @@ const darkTheme = {
     bodyPrimary: "hsla(0, 0%, 100%, 1)",
     bodyAccent: "hsla(0, 0%, 100%, 1)",
     bodyBold: "hsla(0, 0%, 100%, 1)",
+    error: "hsla(0, 91%, 62%, 1)",
   },
 };
 

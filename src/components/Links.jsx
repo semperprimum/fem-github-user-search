@@ -8,22 +8,28 @@ export const Links = ({ user }) => {
   return (
     <LinksList aria-label="Links" role="list">
       <LinksItem>
-        <Link $notAvailable={!user?.location} as={"p"}>
+        <Link $unavailable={!user?.location} as={"p"}>
           <IconLocation aria-hidden="true" />
           {user?.location || "Not available"}
         </Link>
       </LinksItem>
       <LinksItem>
-        <Link $notAvailable={!user?.blog} as={user?.blog === "" && "p"} href={user?.blog}>
+        <Link
+          $unavailable={!user?.blog}
+          as={user?.blog === "" && "p"}
+          href={user?.blog}
+        >
           <IconWebsite aria-hidden="true" />
           {user?.blog || "Not available"}
         </Link>
       </LinksItem>
       <LinksItem>
         <Link
-          $notAvailable={!user?.twitter_username}
+          $unavailable={!user?.twitter_username}
           as={user?.twitter_username === "" && "p"}
-          href={user?.twitter_username && `https://x.com/${user?.twitter_username}`}
+          href={
+            user?.twitter_username && `https://x.com/${user?.twitter_username}`
+          }
         >
           <IconTwitter aria-hidden="true" />
           {user?.twitter_username || "Not available"}
@@ -31,7 +37,7 @@ export const Links = ({ user }) => {
       </LinksItem>
       <LinksItem>
         <Link
-          $notAvailable={!user?.company}
+          $unavailable={!user?.company}
           href={
             user?.company &&
             `https://github.com/${user?.company.replace("@", "")}`
