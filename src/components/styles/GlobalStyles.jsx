@@ -44,6 +44,11 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: "Space Mono";
     background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.bodyPrimary}
+    color: ${({ theme }) => theme.colors.bodyPrimary};
+
+    @media only screen and (min-width: 60em) {
+      display: grid;
+      place-items: center;
+    }
   } 
 `;

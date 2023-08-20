@@ -8,5 +8,6 @@ export const Container = styled.section`
   }
   @media only screen and (min-width: 60em) {
     max-width: 45.645rem;
+    transform: translateY(-.75rem); // For design comparison slider
   }
 `;

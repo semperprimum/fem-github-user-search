@@ -8,6 +8,9 @@ export const HeaderWrapper = styled.header`
   @media only screen and (min-width: 37.5em) {
     margin-top: 5.75rem;
   }
+  @media only screen and (min-width: 60em) {
+    margin-top: 0;
+  }
 `;
 export const Logo = styled.p`
   line-height: normal;

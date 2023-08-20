@@ -19,6 +19,7 @@ export const UserContainer = styled.div`
     display: flex;
     gap: 2.3rem;
     padding: 3rem;
+    margin-bottom: 0;
   }
 `;
 

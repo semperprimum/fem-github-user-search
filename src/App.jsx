@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Header, Search, User } from "./components";
+import { Attribution, Header, Search, User } from "./components";
 import { GlobalStyles } from "./components/styles/GlobalStyles";
 import ThemeProvider from "./context/ThemeContext";
 import UserService from "./Services/UserService";
@@ -44,6 +44,9 @@ const App = () => {
         />
         <User user={user} isLoading={isLoading} />
       </main>
+      <footer>
+        <Attribution />
+      </footer>
     </ThemeProvider>
   );
 };
