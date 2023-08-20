@@ -48,7 +48,7 @@ export const GlobalStyles = createGlobalStyle`
 
     @media only screen and (min-width: 60em) {
       display: grid;
-      place-items: center;
+      align-items: center;
     }
   } 
 `;

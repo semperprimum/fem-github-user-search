@@ -31,8 +31,10 @@ export const LinksItem = styled.li`
 export const Link = styled.a`
   ${({ $unavailable }) => $unavailable && "opacity: 0.5;"}
   font-size: var(--fs-300);
+    max-width: 13.125rem;
   text-align: start;
   display: grid;
+    overflow: hidden;
     align-items: center;
   grid-template-columns: 1.25rem auto;
   gap: 0.8rem;

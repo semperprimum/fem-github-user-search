@@ -3,6 +3,7 @@ import { ReactComponent as IconLocation } from "../assets/icon-location.svg";
 import { ReactComponent as IconWebsite } from "../assets/icon-website.svg";
 import { ReactComponent as IconTwitter } from "../assets/icon-twitter.svg";
 import { ReactComponent as IconCompany } from "../assets/icon-company.svg";
+import {shortenLink} from "../utils/ShortenLink";
 
 export const Links = ({ user }) => {
   return (
@@ -20,7 +21,7 @@ export const Links = ({ user }) => {
           href={user?.blog}
         >
           <IconWebsite aria-hidden="true" />
-          {user?.blog || "Not available"}
+          {shortenLink(user?.blog) || "Not available"}
         </Link>
       </LinksItem>
       <LinksItem>
