@@ -12,7 +12,7 @@ export const HeaderWrapper = styled.header`
     margin-top: 0;
   }
 `;
-export const Logo = styled.p`
+export const Logo = styled.h1`
   line-height: normal;
   font-weight: 700;
   font-size: var(--fs-800);
