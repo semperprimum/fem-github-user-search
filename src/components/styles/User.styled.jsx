@@ -49,8 +49,10 @@ export const UserWrapper = styled.div`
 `;
 
 export const UserContent = styled.div`
-  display: flex;
-  justify-content: space-between;
+  @media only screen and (min-width: 60em) {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 export const UserNames = styled.div``;
